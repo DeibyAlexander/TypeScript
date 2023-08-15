@@ -8,7 +8,6 @@ console.log(wonderFulGroup);
 
 //! Tipos de datos de Javascript
 
-
 //* number
 
 let artemisQuantity:number = 40

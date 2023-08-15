@@ -23,6 +23,7 @@ console.log(artemisSygned); */
 let artemisSygned;
 console.log(artemisSygned);
 let artemisAny = 10;
+artemisAny = "anything";
 console.log(artemisAny);
 //* unknown
 //* never

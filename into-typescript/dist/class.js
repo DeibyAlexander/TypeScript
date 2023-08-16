@@ -1,15 +1,5 @@
 "use strict";
 class Astronauta {
-    /*     public id:number;
-        public nombre:String;
-        public record:String;
-    
-    
-        constructor(id:number, nombre:string, record:string){
-            this.id = id,
-            this.nombre= nombre,
-            this.record = record
-        } */
     constructor(id, nombre, _record, recompensa) {
         this.id = id;
         this.nombre = nombre;

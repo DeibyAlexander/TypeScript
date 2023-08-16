@@ -7,7 +7,7 @@
 // récord, reportar el pago que será de 500 millones. El récord
 // esta en 15,50 metros.
 let nombreAtleta = "Mariana";
-let marcaSalto = 18;
+let marcaSalto = 12;
 let nombreCampeona = "";
 let record = 15.40;
 let rompioRecord = "no";

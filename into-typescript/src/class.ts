@@ -1,11 +1,34 @@
+
+import axios from "axios" 
+import { APISpacexResponse } from "./interfaces/apispacex-response.interface";
+
 class Astronauta {
 
     constructor(
         public readonly id:number,
         public nombre:String,
         private _record:String,
-        public recompensa?:String
+        public recompensa?:String,
+        public mission:String[]=[]
     ){}
+    async getLaunches(){
+        const url = 'https://api.spacexdata.com/v3/launches'
+        const {data} = await axios.get<APISpacexResponse[]>(url)
+
+        let contador = 0
+
+        data.forEach((element:any) => {
+            const {mission_name} = element
+            this.mission[contador] = mission_name
+            contador = contador + 1
+
+            
+        });
+        console.log(this.mission);
+        return this.mission
+        
+        
+    }
     obtenerRecompensa(record:String){
         if (record === 'Artemis') {
             this.recompensa = "Gano 5 millones"
@@ -48,6 +71,12 @@ console.log(`Record vai Setter ${astro1.record}`);
 
 astro1.recompensa= "Artemis"
 console.log(`La recompensa ${astro1.recompensa}`);
+
+// ! Metodo async invocation
+astro1.getLaunches()
+
+
+
 
 
 
